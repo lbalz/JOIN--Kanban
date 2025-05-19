@@ -1,3 +1,14 @@
+@keyframes scaleUp {
+    from {
+        width: 650px;
+        height: 450px;
+    }
+    to {
+        width: 600px;
+        height: 600px;
+    }
+}
+
 body {
     min-height: 100vh;
     max-height: 100vh;
@@ -5,6 +16,7 @@ body {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    background-color: var(--primary-color);
 }
 
 /* Content Container */
@@ -58,6 +70,7 @@ body {
     border-radius: 30px;
     background-color: var(--white);
     box-shadow: 0px 0px 10px 3px #00000014;
+    animation: scaleUp 0.2s ease;
 }
 
 .signup-title {
