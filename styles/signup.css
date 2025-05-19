@@ -1,0 +1,301 @@
+body {
+    min-height: 100vh;
+    max-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Content Container */
+.signup-content-container {
+    width: 100%;
+    max-width: var(--max-width);
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 24px;
+    margin: 0 auto;
+    background-color: var(--primary-color);
+}
+
+/* Header */
+.signup-header {
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: start;
+}
+
+.logo {
+    padding: 64px 0 0 64px;
+}
+
+.logo>img {
+    width: 100px;
+    height: 120px;
+}
+
+/* Main Content */
+.signup-wrapper {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.signup-container {
+    width: 600px;
+    height: 600px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    border-radius: 30px;
+    background-color: var(--white);
+    box-shadow: 0px 0px 10px 3px #00000014;
+}
+
+.signup-title {
+    width: 70%;
+    height: 72px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    padding-top: 32px;
+}
+
+.signup-title>h1 {
+    font-weight: bold;
+    text-decoration: underline;
+    text-decoration-color: var(--primary-color);
+    text-decoration-thickness: 3px;
+    text-underline-offset: 24px;
+}
+
+.back-to-login {
+    display: flex;
+    justify-self: center;
+    align-items: center;
+    position: absolute;
+    left: -32px;
+    top: 60%;
+    width: 32px;
+    height: 32px;
+    background-image: url("../assets/icons/default/arrow_left_default.svg");
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+}
+
+.back-to-login:hover {
+    background-image: url("/assets/icons/hover/arrow_left_default_hover.svg");
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    transition: transform 0.2s;
+    transform: scale(1.05);
+}
+
+.signup-form {
+    width: 70%;
+    height: 480px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    gap: 32px;
+    padding-top: 32px;
+}
+
+.form-wrapper {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 32px;
+    position: relative;
+}
+
+.form-group {
+    width: 100%;
+    display: flex;
+    position: relative;
+}
+
+.form-group>input {
+    width: 100%;
+    height: 48px;
+    font-size: 20px;
+    padding: 0 16px;
+    border: 0;
+    border-bottom: 1px solid var(--light-gray);
+}
+
+.form-group>input:focus {
+    outline: none;
+    border-color: var(--primary-color);
+}
+
+.form-group>input.error {
+    border-color: var(--error-color);
+}
+
+.form-group>.mail-icon, .lock-icon, .profile-icon {
+    width: 24px;
+    height: 24px;
+    position: absolute;
+    right: 16px;
+    top: 12px;
+}
+
+.error-msg {
+    display: none;
+    font-size: 14px;
+    color: var(--error-color);
+    position: absolute;
+    left: 0;
+    bottom: -20px;
+}
+
+.button-container {
+    width: 100%;
+    height: 48px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 32px;
+}
+
+.button-container>button {
+    font-size: 24px;
+    cursor: pointer;
+}
+
+.button-container>button:hover {
+    transition: transform 0.2s;
+    transform: scale(1.05);
+}
+
+.signup-btn {
+    width: 136px;
+    height: 100%;
+    background-color: var(--primary-color);
+    color: var(--white);
+    border-radius: 8px;
+    border: 0;
+}
+
+.signup-btn:hover {
+    background-color: var(--secondary-color);
+}
+
+.signup-btn:active {
+    background-color: var(--white);
+    border: 1px solid var(--secondary-color);
+    color: var(--secondary-color);
+}
+
+.privacy-policy-check {
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 6px;
+    font-size: 16px;
+}
+
+.checkbox-container {
+    width: 24px;
+    height: 24px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+.checkbox-container>img {
+    width: 24px;
+    height: 24px;
+}
+
+.checkbox-container>img:hover {
+    transition: transform 0.2s;
+    transform: scale(1.05);
+}
+
+.privacy-policy-checkbox {
+    width: 0;
+    height: 0;
+    opacity: 0;
+}
+
+.checkbox-plain-text-container {
+    width: 84px;
+    height: 24px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: var(--dark-gray);
+}
+
+.checkbox-link-container {
+    width: 110px;
+    height: 24px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.checkbox-link-container>a {
+    text-decoration: none;
+    color: var(--secondary-color);
+}
+
+.checkbox-link-container>a:hover {
+    font-weight: bold;
+    transition: transform 0.2s;
+    transform: scale(1.05);
+    text-decoration: underline;
+}
+
+/* Footer */
+.signup-footer {
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 48px;
+    font-size: 16px;
+    margin-bottom: 24px;
+}
+
+.footer-links {
+    width: 100px;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.footer-links>a {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: var(--white);
+    text-decoration: none;
+}
+
+.footer-links>a:hover {
+    color: var(--secondary-color);
+}

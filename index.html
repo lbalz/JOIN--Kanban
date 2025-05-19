@@ -3,9 +3,84 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Join - Log in</title>
+    <link rel="shortcut icon" href="./assets/icons/default/favicon.svg" type="image/x-icon">
+    <!-- Styles -->
+    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="./styles/login.css">
+
+    <!-- Scripts -->
+    <script src="./script.js"></script>
+    <script src="./scripts/login.js"></script>
 </head>
 <body>
-    Hallo Welt!
+    <!-- Content Container -->
+    <div class="login-content-container">
+        <!-- Header -->
+        <div class="login-header">
+            <div class="logo">
+                <img src="./assets/icons/default/favicon.svg" alt="">
+            </div>
+
+            <div class="signup-container">
+                <div class="signup-text">
+                    <p>Not a Join User?</p>
+                </div>
+                <div class="signup-button">
+                    <a href="./pages/signup.html" >Sign up</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Main Content -->
+        <div class="login-wrapper">
+            <div class="login-container">
+                <div class="login-title">
+                    <h1>Log in</h1>
+                </div>
+
+                <form class="login-form" onsubmit="onLogin()">
+                    <div class="form-wrapper">
+                        <div class="form-group">
+                            <input 
+                            type="email"
+                            placeholder="Email">
+                            <img class="mail-icon" src="./assets/icons/default/mail.svg" alt="">
+                        </div>
+
+                        <div class="form-group">
+                            <input 
+                            type="password"
+                            placeholder="Password">
+                            <img class="lock-icon" src="./assets/icons/default/lock.svg" alt="">
+                        </div>
+                        <span class="error-msg">Check your email and password. Please try again.</span>
+                    </div>
+
+                    <div class="button-container">
+                        <button type="submit" class="login-btn">
+                            Log in
+                        </button>
+
+                        <button type="button" class="guest-btn" onclick="onGuestLogin()">
+                            Guest log in
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </div>
+
+        <!-- Footer -->
+        <div class="login-footer">
+            <div class="footer-links">
+                <a href="./pages/privacy-policy-external.html">Privacy Policy</a>
+            </div>
+
+            <div class="footer-links">
+                <a href="./pages/legal-notice-external.html">Legal Notice</a>
+            </div>
+        </div>
+    </div>
+
 </body>
 </html>

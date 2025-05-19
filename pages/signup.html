@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Join - Sign up</title>
+    <link rel="shortcut icon" href="../assets/icons/default/favicon.svg" type="image/x-icon">
+    <!-- Styles -->
+    <link rel="stylesheet" href="../style.css">
+    <link rel="stylesheet" href="../styles/signup.css">
+
+     <!-- Scripts -->
+    <script src="../script.js"></script>
+    <script src="../scripts/signup.js"></script>
+</head>
+<body>
+    <!-- Content Container -->
+    <div class="signup-content-container">
+        <!-- Header -->
+        <div class="signup-header">
+            <div class="logo">
+                <img src="../assets/icons/default/header_logo.svg" alt="">
+            </div>
+        </div>
+
+        <!-- Main Content -->
+        <div class="signup-wrappper">
+            <div class="signup-container">
+                <div class="signup-title">
+                    <a href="../index.html" class="back-to-login"></a>
+
+                    <h1>Sign up</h1>
+                </div>
+
+                <form class="signup-form" onsubmit="">
+                    <div class="form-wrapper">
+                        <div class="form-group">
+                            <input 
+                            type="text"
+                            placeholder="Name">
+                            <img class="profile-icon" src="../assets/icons/default/person.svg" alt="">
+                        </div>
+
+                        <div class="form-group">
+                            <input 
+                            type="email"
+                            placeholder="Email">
+                            <img class="mail-icon" src="../assets/icons/default/mail.svg" alt="">
+                        </div>
+
+                        <div class="form-group">
+                            <input 
+                            type="password"
+                            placeholder="Password"
+                            onkeydown="changePasswordVisibility()">
+                            <img class="lock-icon" src="../assets/icons/default/lock.svg" alt="">
+                        </div>
+
+                        <div class="form-group">
+                            <input 
+                            type="password"
+                            placeholder="Confirm password">
+                            <img class="lock-icon" src="../assets/icons/default/lock.svg" alt="">
+                        </div>
+                        <span class="error-msg">Check your email and password. Please try again.</span>
+
+                        <div class="privacy-policy-check">
+                            <div class="checkbox-container">
+                                <img 
+                                id="checkboxIcon"
+                                src="../assets/icons/default/checkbox_default.svg"
+                                onclick="toggleCheckbox()"
+                                alt="">
+                                <input type="checkbox" class="privacy-policy-checkbox">
+                            </div>
+
+                            <div class="checkbox-plain-text-container">
+                                <span>I accept the </span>
+                            </div>
+
+                            <div class="checkbox-link-container">
+                                <a href="./privacy-policy-external.html">Privacy Policy</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="button-container">
+                        <button type="submit" class="signup-btn">
+                            Sign up
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </div>
+
+        <!-- Footer -->
+        <div class="signup-footer">
+            <div class="footer-links">
+                <a href="./privacy-policy-external.html">Privacy Policy</a>
+            </div>
+
+            <div class="footer-links">
+                <a href="./legal-notice-external.html">Legal Notice</a>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

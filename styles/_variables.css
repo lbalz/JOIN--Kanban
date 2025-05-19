@@ -1,0 +1,13 @@
+:root {
+    --font-family-primary: 'Open Sans', sans-serif;
+    --primary-color: #4589FF;
+    --secondary-color: #005DFF;
+    --third-color: #091931;
+    --error-color: #FF8190;
+    --white: #FFFFFF;
+    --black: #000000;
+    --gray: #647188;
+    --light-gray: #D1D1D1;
+    --dark-gray: #42526E;
+    --max-width: 1440px;
+}
