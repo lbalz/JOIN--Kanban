@@ -56,8 +56,8 @@
                             id="signupPassword"
                             type="password"
                             placeholder="Password"
-                            onkeydown="togglePwInputImg()"
-                            onkeyup="togglePwInputImg()">
+                            onkeydown="togglePwInputImg(); passwordLengthValidation(this)"
+                            onkeyup="togglePwInputImg(); passwordLengthValidation(this)">
                             <img id="passwordIcon" class="lock-icon" onclick="togglePasswordVisibility()" src="../assets/icons/default/lock.svg" alt="">
                         </div>
 
@@ -66,8 +66,10 @@
                             id="signupConfirmedPassword"
                             type="password"
                             placeholder="Confirm password"
-                            onkeydown="togglePwInputImg()"
-                            onkeyup="togglePwInputImg()">
+                            onkeydown="togglePwInputImg(); passwordLengthValidation(this); confirmPasswordFormValidation(this)"
+                            onkeyup="togglePwInputImg(); passwordLengthValidation(this); confirmPasswordFormValidation(this)"
+                            onfocus="passwordLengthValidation(this); confirmPasswordFormValidation(this)"
+                            onblur="passwordLengthValidation(this); confirmPasswordFormValidation(this)">
                             <img id="confirmPasswordIcon" class="lock-icon" onclick="toggleConfirmPasswordVisibility()" src="../assets/icons/default/lock.svg" alt="">
                         </div>
                         <span class="error-msg">Check your email and password. Please try again.</span>

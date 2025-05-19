@@ -2,6 +2,34 @@ let checkboxClicked = false;
 let passwordVisibility = false;
 let confirmPasswordVisibility = false;
 
+//TODO: Form Validation beim tippen bzw anklicken
+function passwordLengthValidation(element) {
+    if (element.value.length + 1 < 7) {
+        element.classList.add("error");
+    } else {
+        element.classList.remove("error");
+    }
+}
+
+function confirmPasswordFormValidation(element) {
+    const pwInput = document.getElementById('signupPassword');
+
+    if (element.value.length + 1 < 7) {
+        element.classList.add("error");
+    } else {
+        if (pwInput.value === element.value) {
+            // element.classList.add("error");
+            element.classList.remove("error");
+        } else {
+            element.classList.add("error");
+            console.log("passwörter nicht gleich")
+        }
+    }
+}
+
+
+
+// Toggles Privacy Policy checkbox img
 function toggleCheckbox() {
     const checkbox = document.getElementById('checkboxIcon');
     checkboxClicked = !checkboxClicked;
@@ -13,6 +41,7 @@ function toggleCheckbox() {
     }
 }
 
+// Gets all form Data to send it to DB for e.g.
 function getFormData() {
     const formData = {
         name: document.getElementById('signupName').value,
@@ -25,6 +54,7 @@ function getFormData() {
     return formData;
 }
 
+// Clears the form values to ''
 function clearForm() {
     document.getElementById('signupName').value = '';
     document.getElementById('signupEmail').value = '';
@@ -34,6 +64,7 @@ function clearForm() {
     document.getElementById('checkboxIcon').src = '../assets/icons/default/checkbox_default.svg';
 }
 
+// Helper function to toggle the icon in password input
 function passwordInputImgCheck() {
     const pwInput = document.getElementById('signupPassword');
     const pwInputIcon = document.getElementById('passwordIcon');
@@ -49,6 +80,7 @@ function passwordInputImgCheck() {
     }
 }
 
+// Helper function to toggle the icon in confirm password input
 function confirmPasswordInputImgCheck() {
     const pwConfInput = document.getElementById('signupConfirmedPassword');
     const pwConfInputIcon = document.getElementById('confirmPasswordIcon');
@@ -64,11 +96,13 @@ function confirmPasswordInputImgCheck() {
     }
 }
 
+// Toggle password & confirm password icons
 function togglePwInputImg() {
     passwordInputImgCheck();
     confirmPasswordInputImgCheck();
 }
 
+// Toggle the text visibility of password input
 function togglePasswordVisibility() {
     const pwInput = document.getElementById('signupPassword');
     const pwInputIcon = document.getElementById('passwordIcon');
@@ -84,6 +118,7 @@ function togglePasswordVisibility() {
     }
 }
 
+// Toggle the text visibility of confirm password input
 function toggleConfirmPasswordVisibility() {
     const pwConfInput = document.getElementById('signupConfirmedPassword');
     const pwConfInputIcon = document.getElementById('confirmPasswordIcon');
@@ -99,6 +134,8 @@ function toggleConfirmPasswordVisibility() {
     }
 }
 
+//TODO: Form Validation extra für hier nochmal am ende
+// Signup new user and send him to login page
 function signupUser() {
     const formData = getFormData();
 
