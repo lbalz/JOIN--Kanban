@@ -56,17 +56,19 @@
                             id="signupPassword"
                             type="password"
                             placeholder="Password"
-                            onkeydown="checkPasswordVisibility()"
-                            onkeyup="checkPasswordVisibility()">
-                            <img class="lock-icon" onclick="togglePasswordVisibility()" src="../assets/icons/default/lock.svg" alt="">
+                            onkeydown="togglePwInputImg()"
+                            onkeyup="togglePwInputImg()">
+                            <img id="passwordIcon" class="lock-icon" onclick="togglePasswordVisibility()" src="../assets/icons/default/lock.svg" alt="">
                         </div>
 
                         <div class="form-group">
                             <input 
                             id="signupConfirmedPassword"
                             type="password"
-                            placeholder="Confirm password">
-                            <img class="lock-icon" src="../assets/icons/default/lock.svg" alt="">
+                            placeholder="Confirm password"
+                            onkeydown="togglePwInputImg()"
+                            onkeyup="togglePwInputImg()">
+                            <img id="confirmPasswordIcon" class="lock-icon" onclick="toggleConfirmPasswordVisibility()" src="../assets/icons/default/lock.svg" alt="">
                         </div>
                         <span class="error-msg">Check your email and password. Please try again.</span>
 

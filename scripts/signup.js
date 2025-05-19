@@ -1,4 +1,6 @@
 let checkboxClicked = false;
+let passwordVisibility = false;
+let confirmPasswordVisibility = false;
 
 function toggleCheckbox() {
     const checkbox = document.getElementById('checkboxIcon');
@@ -10,6 +12,7 @@ function toggleCheckbox() {
         checkbox.src = '../assets/icons/default/checkbox_checked.svg';
     }
 }
+
 function getFormData() {
     const formData = {
         name: document.getElementById('signupName').value,
@@ -31,31 +34,66 @@ function clearForm() {
     document.getElementById('checkboxIcon').src = '../assets/icons/default/checkbox_default.svg';
 }
 
-function checkPasswordIsEmpty() {
-    // Check ob das pw input feld leer ist, wenn ja zeige lock.svg
-}
+function passwordInputImgCheck() {
+    const pwInput = document.getElementById('signupPassword');
+    const pwInputIcon = document.getElementById('passwordIcon');
 
-function checkPasswordLength() {
-    // Check ob pw length + 1 > 0 also 1+ stellen lang ist, wenn ja zeige auge zu
-     
-}
-// Onclick auf img soll checken ob checkPasswordIsEmpty() false & checkPasswordLength() > 0 + 1 ist, wenn ja wechselt das bild beim click, sonst kommt ein alert idealerweise mit dem was noch passieren muss damit die onclick ausführbar ist
-function checkPasswordVisibility() {
-    const passwordInput = document.getElementById('signupPassword');
-    const confirmPasswordInput = document.getElementById('signupConfirmedPassword');
-    const passwordIcon = document.querySelector('.lock-icon');
-
-    if (passwordInput.value.length + 1 > 0) {
-        if (passwordInput.type === 'password') {
-            passwordIcon.src = '../assets/icons/default/visibility_off.svg';
-        } else if (passwordInput.value.length + 1 === 0) {
-            passwordIcon.src = '../assets/icons/default/lock.svg';
-        }
+    if (pwInput.value.length > 0) {
+        pwInputIcon.src = "../assets/icons/default/visibility_off.svg";
+        pwInputIcon.style.cursor = "pointer";
+        passwordVisibility = true;
+    } else {
+        pwInputIcon.src = "../assets/icons/default/lock.svg";
+        pwInputIcon.style.cursor = "default";
+        passwordVisibility = false;
     }
 }
 
-function togglePasswordVisibility() {
+function confirmPasswordInputImgCheck() {
+    const pwConfInput = document.getElementById('signupConfirmedPassword');
+    const pwConfInputIcon = document.getElementById('confirmPasswordIcon');
 
+    if (pwConfInput.value.length > 0) {
+        pwConfInputIcon.src = "../assets/icons/default/visibility_off.svg";
+        pwConfInputIcon.style.cursor = "pointer";
+        confirmPasswordVisibility = true;
+        console.log(pwConfInput)
+    } else {
+        pwConfInputIcon.src = "../assets/icons/default/lock.svg";
+        pwConfInputIcon.style.cursor = "default";
+        confirmPasswordVisibility = false;
+    }
+}
+
+function togglePwInputImg() {
+    passwordInputImgCheck();
+    confirmPasswordInputImgCheck();
+}
+
+function togglePasswordVisibility() {
+    const pwInput = document.getElementById('signupPassword');
+    const pwInputIcon = document.getElementById('passwordIcon');
+    
+    if (passwordVisibility) {
+        pwInputIcon.src = "../assets/icons/default/visibility.svg";
+        passwordVisibility = false;
+    } else {
+        pwInputIcon.src = "../assets/icons/default/visibility_off.svg";
+        passwordVisibility = true;
+    }
+}
+
+function toggleConfirmPasswordVisibility() {
+    const pwConfInput = document.getElementById('signupPassword');
+    const pwConfInputIcon = document.getElementById('confirmPasswordIcon');
+
+    if (confirmPasswordVisibility) {
+        pwConfInputIcon.src = "../assets/icons/default/visibility.svg";
+        confirmPasswordVisibility = false;
+    } else {
+        pwConfInputIcon.src = "../assets/icons/default/visibility_off.svg";
+        confirmPasswordVisibility = true;
+    }
 }
 
 function signupUser() {
