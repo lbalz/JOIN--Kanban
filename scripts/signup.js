@@ -57,7 +57,6 @@ function confirmPasswordInputImgCheck() {
         pwConfInputIcon.src = "../assets/icons/default/visibility_off.svg";
         pwConfInputIcon.style.cursor = "pointer";
         confirmPasswordVisibility = true;
-        console.log(pwConfInput)
     } else {
         pwConfInputIcon.src = "../assets/icons/default/lock.svg";
         pwConfInputIcon.style.cursor = "default";
@@ -77,22 +76,26 @@ function togglePasswordVisibility() {
     if (passwordVisibility) {
         pwInputIcon.src = "../assets/icons/default/visibility.svg";
         passwordVisibility = false;
+        pwInput.attributes.type.value = "text";
     } else {
         pwInputIcon.src = "../assets/icons/default/visibility_off.svg";
         passwordVisibility = true;
+        pwInput.attributes.type.value = "password";
     }
 }
 
 function toggleConfirmPasswordVisibility() {
-    const pwConfInput = document.getElementById('signupPassword');
+    const pwConfInput = document.getElementById('signupConfirmedPassword');
     const pwConfInputIcon = document.getElementById('confirmPasswordIcon');
 
     if (confirmPasswordVisibility) {
         pwConfInputIcon.src = "../assets/icons/default/visibility.svg";
         confirmPasswordVisibility = false;
+        pwConfInput.attributes.type.value = "text";
     } else {
         pwConfInputIcon.src = "../assets/icons/default/visibility_off.svg";
         confirmPasswordVisibility = true;
+        pwConfInput.attributes.type.value = "password";
     }
 }
 
