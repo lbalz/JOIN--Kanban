@@ -8,3 +8,6 @@ function startAnimation() {
     // Animation
 }
 
+function onGuestLogin() {
+    window.location.href = "../pages/summary.html"
+}

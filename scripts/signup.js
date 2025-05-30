@@ -2,7 +2,7 @@ let checkboxClicked = false;
 let passwordVisibility = false;
 let confirmPasswordVisibility = false;
 
-//TODO: Form Validation beim tippen bzw anklicken
+// Checks if the pw length is 6 or higher
 function passwordLengthValidation(element) {
     if (element.value.length + 1 < 7) {
         element.classList.add("error");
@@ -11,6 +11,7 @@ function passwordLengthValidation(element) {
     }
 }
 
+// Checks if the confirmed pw is the same as the normal pw
 function confirmPasswordFormValidation(element) {
     const pwInput = document.getElementById('signupPassword');
 
@@ -18,7 +19,6 @@ function confirmPasswordFormValidation(element) {
         element.classList.add("error");
     } else {
         if (pwInput.value === element.value) {
-            // element.classList.add("error");
             element.classList.remove("error");
         } else {
             element.classList.add("error");
@@ -27,7 +27,7 @@ function confirmPasswordFormValidation(element) {
     }
 }
 
-
+//TODO: Privacy Policy Check -> show error msgs -> send data -> show popup
 
 // Toggles Privacy Policy checkbox img
 function toggleCheckbox() {
