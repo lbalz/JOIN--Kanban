@@ -22,6 +22,7 @@ body {
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
+    box-shadow: 0px 0px 4px 0px rgba(0, 0, 0, 0.16);
 }
 
 .nav-container {
@@ -58,13 +59,105 @@ body {
 }
 
 .active:hover {
-    cursor: not-allowed;
+    cursor: default;
     background-color: var(--sidebar-active);
+}
+
+.legal-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 48px;
+}
+
+.legal-link {
+    font-size: 16px;
+    color: #42526E;
+    text-decoration: none;
+    padding: 8px;
+}
+
+.legal-link:hover {
+    color: var(--secondary-color);
 }
 
 .page-content {
     width: 84%;
     height: 100%;
-    background-color: orange;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
+.content-wrapper {
+    width: 75%;
+    height: 65%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: mediumorchid;
+}
+
+#greetingContainer {
+    width: 100%;
+    height: 140px;
+    display: flex;
+    justify-content: center;
+    align-items: start;
+    background-color: yellow;
+}
+
+.guest-greeting-text {
+    font-size: 64px;
+    color: #2A3647;
+}
+
+.summary-container {
+    width: 100%;
+    height: calc(100% - 140px);
+    background-color: blue;
+}
+
+.urgent-tasks-contianer {
+
+}
+
+.board-tasks-container {
+
+}
+
+.top-content {
+    display: flex;
+}
+
+.task-icon-wrapper {
+    width: 78px;
+    height: 78px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 40px;
+    border: 1px solid var(--secondary-color);
+}
+
+.task-icon {
+    width: 80px;
+    height: 80px;
+    /* border-radius: 40px; */
+}
+
+#totalBoardTasks, #totalToDoTasks, #totalInProgressTasks, #totalAwaitFeedbackTasks, #totalDoneTasks {
+    font-size: 48px;
+    font-weight: bold;
+    color: black;
+}
+
+.bottom-content {
+
+}
+
+.bottom-content-text {
+    color: var(--secondary-color);
+    font-size: 24px;
+}

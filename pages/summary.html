@@ -8,8 +8,11 @@
     <!-- Styles -->
     <link rel="stylesheet" href="../style.css">
     <link rel="stylesheet" href="../styles/summary.css">
+
+    <!-- Scripts -->
+    <script src="../scripts/summary.js"></script>
 </head>
-<body>
+<body onload="loadSummaryContent()">
     <header>
         <a class="logo-container" href="/">
             <img src="../assets/icons/default/header_logo.svg" alt="">
@@ -33,11 +36,86 @@
     <div class="sidebar-content-container">
         <main class="page-content">
             <div class="content-wrapper">
-                <div class="greeting-container">
-                    <!-- Render function, wenn guest login render good morning, wenn login render mit name -->
+                <div id="greetingContainer" class="greeting-container">
+                    <!-- guest render function -->
                 </div>
 
+                <div class="summary-container">
+                    <!-- Urgent Tasks -->
+                    <div class="urgent-tasks-container">
 
+                    </div>
+
+                    <!-- Board Tasks-->
+                    <div class="board-tasks-container">
+                        <div class="top-content">
+                            <div class="task-icon-wrapper">
+                                <img class="task-icon" src="../assets/icons/summary/board.svg" alt="">
+                            </div>
+                            <p id="totalBoardTasks">5</p>
+                        </div>
+
+                        <div class="bottom-content">
+                            <p class="bottom-content-text">Tasks in Board</p>
+                        </div>
+                    </div>
+
+                    <!-- To-Do Tasks -->
+                    <div class="todo-tasks-container">
+                        <div class="top-content">
+                            <div class="task-icon-wrapper">
+                                <img class="task-icon" src="../assets/icons/summary/todo.svg" alt="">
+                            </div>
+                            <p id="totalToDoTasks">4</p>
+                        </div>
+
+                        <div class="bottom-content">
+                            <p class="bottom-content-text">Tasks To-Do</p>
+                        </div>
+                    </div>
+
+                    <!-- In progress Tasks-->
+                    <div class="inprogress-tasks-container">
+                        <div class="top-content">
+                            <div class="task-icon-wrapper">
+                                <img class="task-icon" src="../assets/icons/summary/in_progress.svg" alt="">
+                            </div>
+                            <p id="totalInProgressTasks">3</p>
+                        </div>
+
+                        <div class="bottom-content">
+                            <p class="bottom-content-text">Tasks in Progress</p>
+                        </div>
+                    </div>
+
+                    <!-- Await Feedback Tasks -->
+                    <div class="awaitfeedback-tasks-container">
+                        <div class="top-content">
+                            <div class="task-icon-wrapper">
+                                <img class="task-icon" src="../assets/icons/summary/await_feedback.svg" alt="">
+                            </div>
+                            <p id="totalAwaitFeedbackTasks">2</p>
+                        </div>
+
+                        <div class="bottom-content">
+                            <p class="bottom-content-text">Awaiting Feedback</p>
+                        </div>
+                    </div>
+
+                    <!-- Done Tasks -->
+                    <div class="done-tasks-container">
+                        <div class="top-content">
+                            <div class="task-icon-wrapper">
+                                <img class="task-icon" src="../assets/icons/summary/done.svg" alt="">
+                            </div>
+                            <p id="totalDoneTasks">1</p>
+                        </div>
+
+                        <div class="bottom-content">
+                            <p class="bottom-content-text">Tasks Done</p>
+                        </div>
+                    </div>
+                </div>
             </div>
         </main>
 
@@ -64,9 +142,9 @@
                 </a>
             </nav>
 
-            <div>
-                <a href="./privacy-policy.html">Privacy Policy</a>
-                <a href="./legal-notice.html">Legal Notice</a>
+            <div class="legal-section">
+                <a class="legal-link" href="./privacy-policy.html">Privacy Policy</a>
+                <a class="legal-link" href="./legal-notice.html">Legal Notice</a>
             </div>
         </footer>
     </div>
