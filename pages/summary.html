@@ -10,6 +10,8 @@
     <link rel="stylesheet" href="../styles/summary.css">
 
     <!-- Scripts -->
+     <script src="../script.js"></script>
+     <script src="../scripts/firebase.js"></script>
     <script src="../scripts/summary.js"></script>
 </head>
 <body onload="loadSummaryContent()">
@@ -41,80 +43,108 @@
                 </div>
 
                 <div class="summary-container">
-                    <!-- Urgent Tasks -->
-                    <div class="urgent-tasks-container">
+                    <!-- Summary Container Top Content -->
+                    <div class="summary-top-container">
+                        <!-- Urgent Tasks -->
+                        <div class="urgent-tasks-container">
+                            <div class="urgent-tasks-wrapper">
+                                <div class="left-container">
+                                    <div class="top-content">
+                                        <div class="task-icon-wrapper">
+                                            <img class="task-icon" src="../assets/icons/summary/urgent.svg" alt="">
+                                        </div>
+                                        <p id="totalUrgentTasks">1</p>
+                                    </div>
 
-                    </div>
-
-                    <!-- Board Tasks-->
-                    <div class="board-tasks-container">
-                        <div class="top-content">
-                            <div class="task-icon-wrapper">
-                                <img class="task-icon" src="../assets/icons/summary/board.svg" alt="">
+                                    <div class="bottom-content">
+                                        <p class="bottom-content-text">Tasks Urgent</p>
+                                    </div>
+                                </div>
+                                <div class="urgent-separator"></div>
+                                <div class="right-container">
+                                    <div id="urgentCurrentDateContainer">
+                                        <!-- Date gets loaded via loadDateInUrgentContainer() function -->
+                                    </div>
+                                    <div class="urgent-deadline">
+                                        <p>Upcoming Deadline</p>
+                                    </div>
+                                </div>
                             </div>
-                            <p id="totalBoardTasks">5</p>
                         </div>
 
-                        <div class="bottom-content">
-                            <p class="bottom-content-text">Tasks in Board</p>
-                        </div>
-                    </div>
-
-                    <!-- To-Do Tasks -->
-                    <div class="todo-tasks-container">
-                        <div class="top-content">
-                            <div class="task-icon-wrapper">
-                                <img class="task-icon" src="../assets/icons/summary/todo.svg" alt="">
+                        <!-- Board Tasks-->
+                        <div class="board-tasks-container">
+                            <div class="top-content">
+                                <div class="task-icon-wrapper">
+                                    <img class="task-icon" src="../assets/icons/summary/board.svg" alt="">
+                                </div>
+                                <p id="totalBoardTasks">5</p>
                             </div>
-                            <p id="totalToDoTasks">4</p>
-                        </div>
 
-                        <div class="bottom-content">
-                            <p class="bottom-content-text">Tasks To-Do</p>
-                        </div>
-                    </div>
-
-                    <!-- In progress Tasks-->
-                    <div class="inprogress-tasks-container">
-                        <div class="top-content">
-                            <div class="task-icon-wrapper">
-                                <img class="task-icon" src="../assets/icons/summary/in_progress.svg" alt="">
+                            <div class="bottom-content">
+                                <p class="bottom-content-text">Tasks in Board</p>
                             </div>
-                            <p id="totalInProgressTasks">3</p>
-                        </div>
-
-                        <div class="bottom-content">
-                            <p class="bottom-content-text">Tasks in Progress</p>
                         </div>
                     </div>
-
-                    <!-- Await Feedback Tasks -->
-                    <div class="awaitfeedback-tasks-container">
-                        <div class="top-content">
-                            <div class="task-icon-wrapper">
-                                <img class="task-icon" src="../assets/icons/summary/await_feedback.svg" alt="">
+                    
+                    <!-- Summary Container Bottom Content-->
+                     <div class="summary-bottom-container">
+                        <!-- To-Do Tasks -->
+                        <div class="todo-tasks-container">
+                            <div class="top-content">
+                                <div class="task-icon-wrapper">
+                                    <img class="task-icon" src="../assets/icons/summary/todo.svg" alt="">
+                                </div>
+                                <p id="totalToDoTasks">4</p>
                             </div>
-                            <p id="totalAwaitFeedbackTasks">2</p>
-                        </div>
 
-                        <div class="bottom-content">
-                            <p class="bottom-content-text">Awaiting Feedback</p>
-                        </div>
-                    </div>
-
-                    <!-- Done Tasks -->
-                    <div class="done-tasks-container">
-                        <div class="top-content">
-                            <div class="task-icon-wrapper">
-                                <img class="task-icon" src="../assets/icons/summary/done.svg" alt="">
+                            <div class="bottom-content">
+                                <p class="bottom-content-text">Tasks To-Do</p>
                             </div>
-                            <p id="totalDoneTasks">1</p>
                         </div>
 
-                        <div class="bottom-content">
-                            <p class="bottom-content-text">Tasks Done</p>
+                        <!-- In progress Tasks-->
+                        <div class="inprogress-tasks-container">
+                            <div class="top-content">
+                                <div class="task-icon-wrapper">
+                                    <img class="task-icon" src="../assets/icons/summary/in_progress.svg" alt="">
+                                </div>
+                                <p id="totalInProgressTasks">3</p>
+                            </div>
+
+                            <div class="bottom-content">
+                                <p class="bottom-content-text">Tasks in Progress</p>
+                            </div>
                         </div>
-                    </div>
+
+                        <!-- Await Feedback Tasks -->
+                        <div class="awaitfeedback-tasks-container">
+                            <div class="top-content">
+                                <div class="task-icon-wrapper">
+                                    <img class="task-icon" src="../assets/icons/summary/await_feedback.svg" alt="">
+                                </div>
+                                <p id="totalAwaitFeedbackTasks">2</p>
+                            </div>
+
+                            <div class="bottom-content">
+                                <p class="bottom-content-text">Awaiting Feedback</p>
+                            </div>
+                        </div>
+
+                        <!-- Done Tasks -->
+                        <div class="done-tasks-container">
+                            <div class="top-content">
+                                <div class="task-icon-wrapper">
+                                    <img class="task-icon" src="../assets/icons/summary/done.svg" alt="">
+                                </div>
+                                <p id="totalDoneTasks">1</p>
+                            </div>
+
+                            <div class="bottom-content">
+                                <p class="bottom-content-text">Tasks Done</p>
+                            </div>
+                        </div>
+                     </div>
                 </div>
             </div>
         </main>

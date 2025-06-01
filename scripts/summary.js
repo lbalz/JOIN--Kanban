@@ -32,8 +32,22 @@ function getCurrentDate() {
 }
 
 
+function loadDateInUrgentContainer() {
+    const currentDate = getCurrentDate();
+    const urgentCurrentDateContainer = document.getElementById('urgentCurrentDateContainer');
+
+    urgentCurrentDateContainer.innerHTML = dateTemplate(currentDate);
+}
+
+
+function dateTemplate(date) {
+    return `<p class="urgent-date">${date}</p>`;
+}
+
+
 function loadSummaryContent() {
     checkLoginStatus();
+    loadDateInUrgentContainer();
 
     console.log(getCurrentDate());
 }

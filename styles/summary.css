@@ -7,81 +7,6 @@ body {
     align-items: center;
 }
 
-.sidebar-content-container {
-    width: 100%;
-    max-width: 1440px;
-    height: calc(100vh - 96px);
-    display: flex;
-    flex-direction: row-reverse;
-}
-
-.sidebar {
-    width: 17%;
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: center;
-    box-shadow: 0px 0px 4px 0px rgba(0, 0, 0, 0.16);
-}
-
-.nav-container {
-    width: 80%;
-    height: auto;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 16px;
-    margin-top: 48px;
-}
-
-.nav-item {
-    width: 100%;
-    height: 40px;
-    display: flex;
-    justify-content: start;
-    align-items: center;
-    gap: 8px;
-    padding-left: 40px;
-    border-radius: 8px;
-    font-size: 16px;
-    color: #42526E;
-    text-decoration: none;
-    cursor: pointer;
-}
-
-.nav-item:hover {
-    background-color: var(--sidebar-hover);
-}
-
-.active {
-    background-color: var(--sidebar-active);
-}
-
-.active:hover {
-    cursor: default;
-    background-color: var(--sidebar-active);
-}
-
-.legal-section {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 8px;
-    margin-bottom: 48px;
-}
-
-.legal-link {
-    font-size: 16px;
-    color: #42526E;
-    text-decoration: none;
-    padding: 8px;
-}
-
-.legal-link:hover {
-    color: var(--secondary-color);
-}
-
 .page-content {
     width: 84%;
     height: 100%;
@@ -92,11 +17,10 @@ body {
 
 .content-wrapper {
     width: 75%;
-    height: 65%;
+    height: 50%;
     display: flex;
     flex-direction: column;
     align-items: center;
-    background-color: mediumorchid;
 }
 
 #greetingContainer {
@@ -105,7 +29,6 @@ body {
     display: flex;
     justify-content: center;
     align-items: start;
-    background-color: yellow;
 }
 
 .guest-greeting-text {
@@ -116,19 +39,81 @@ body {
 .summary-container {
     width: 100%;
     height: calc(100% - 140px);
-    background-color: blue;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
-.urgent-tasks-contianer {
+.summary-top-container {
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.urgent-tasks-container {
+    width: 70%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--primary-color);
+    cursor: pointer;
+    border-radius: 30px;
+}
+
+.urgent-tasks-wrapper {
+    width: 80%;
+    height: 90%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.left-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+/* left-container top-content muss umbenant werden in urgent zwecks schriftfarbe */
+
+.urgent-separator {
+    height: 90%;
+    width: 3px;
+    background-color: white;
+}
+
+.right-container {
 
 }
 
 .board-tasks-container {
+    width: 208px;
+    height: 191px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 16px;
+    background-color: white;
+    border-radius: 30px;
+    box-shadow: 0px 0px 4px 0px #00000029;
+    cursor: pointer;
+    padding: 40px;
+}
 
+.todo-tasks-container, .inprogress-tasks-contianer, .awaitfeedback-tasks-container, .done-tasks-container {
+    width: 204px;
 }
 
 .top-content {
     display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
 }
 
 .task-icon-wrapper {
@@ -138,7 +123,6 @@ body {
     justify-content: center;
     align-items: center;
     border-radius: 40px;
-    border: 1px solid var(--secondary-color);
 }
 
 .task-icon {
@@ -147,17 +131,20 @@ body {
     /* border-radius: 40px; */
 }
 
-#totalBoardTasks, #totalToDoTasks, #totalInProgressTasks, #totalAwaitFeedbackTasks, #totalDoneTasks {
+#totalUrgentTasks, #totalBoardTasks, #totalToDoTasks, #totalInProgressTasks, #totalAwaitFeedbackTasks, #totalDoneTasks {
     font-size: 48px;
     font-weight: bold;
     color: black;
 }
 
 .bottom-content {
-
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .bottom-content-text {
     color: var(--secondary-color);
     font-size: 24px;
+    text-align: center;
 }
