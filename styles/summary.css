@@ -17,7 +17,7 @@ body {
 
 .content-wrapper {
     width: 75%;
-    height: 50%;
+    height: 55%;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -52,8 +52,16 @@ body {
     align-items: center;
 }
 
+.summary-bottom-container {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
 .urgent-tasks-container {
-    width: 70%;
+    width: 74.5%;
     height: 100%;
     display: flex;
     justify-content: center;
@@ -76,6 +84,7 @@ body {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    gap: 12px;
 }
 
 /* left-container top-content muss umbenant werden in urgent zwecks schriftfarbe */
@@ -86,12 +95,27 @@ body {
     background-color: white;
 }
 
-.right-container {
+.urgent-wrapper-right-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: start;
+    gap: 12px;
+}
 
+.urgent-date {
+    font-size: 32px;
+    font-weight: bold;
+    color: white;
+}
+
+.urgent-deadline {
+    font-size: 24px;
+    color: white;
 }
 
 .board-tasks-container {
-    width: 208px;
+    width: 22.5%;
     height: 191px;
     display: flex;
     flex-direction: column;
@@ -105,8 +129,32 @@ body {
     padding: 40px;
 }
 
-.todo-tasks-container, .inprogress-tasks-contianer, .awaitfeedback-tasks-container, .done-tasks-container {
-    width: 204px;
+.todo-tasks-container {
+    width: 22.5%;
+    height: 85%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0px 0px 4px 0px #00000029;
+    border-radius: 30px;
+    gap: 16px;
+    background-color: var(--sidebar-active);
+    cursor: pointer;
+}
+
+.inprogress-tasks-container, .awaitfeedback-tasks-container, .done-tasks-container {
+    width: 22.5%;
+    height: 85%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0px 0px 4px 0px #00000029;
+    border-radius: 30px;
+    gap: 16px;
+    padding: 40px;
+    cursor: pointer;
 }
 
 .top-content {
@@ -117,8 +165,13 @@ body {
 }
 
 .task-icon-wrapper {
-    width: 78px;
-    height: 78px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 40px;
+}
+
+.urgent-task-icon-wrapper {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -128,10 +181,23 @@ body {
 .task-icon {
     width: 80px;
     height: 80px;
-    /* border-radius: 40px; */
+    border-radius: 40px;
+    border: 3px solid white;
 }
 
-#totalUrgentTasks, #totalBoardTasks, #totalToDoTasks, #totalInProgressTasks, #totalAwaitFeedbackTasks, #totalDoneTasks {
+.todo-task-icon {
+    width: 80px;
+    height: 80px;
+    border-radius: 40px;
+}
+
+#totalUrgentTasks {
+    font-size: 48px;
+    font-weight: bold;
+    color: white;
+}
+
+#totalBoardTasks, #totalToDoTasks, #totalInProgressTasks, #totalAwaitFeedbackTasks, #totalDoneTasks {
     font-size: 48px;
     font-weight: bold;
     color: black;
@@ -145,6 +211,12 @@ body {
 
 .bottom-content-text {
     color: var(--secondary-color);
+    font-size: 24px;
+    text-align: center;
+}
+
+.urgent-bottom-content-text {
+    color: white;
     font-size: 24px;
     text-align: center;
 }
