@@ -71,7 +71,7 @@ body {
     align-items: center;
 }
 
-.left-container {
+.urgent-wrapper-left-container {
     display: flex;
     flex-direction: column;
     justify-content: center;

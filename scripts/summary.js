@@ -24,7 +24,7 @@ function getCurrentDate() {
     const date = new Date();
     const options = {
         year: 'numeric',
-        month: 'short',
+        month: 'long',
         day: 'numeric'
     };
     const formattedDate = new Intl.DateTimeFormat('en-US', options).format(date);
