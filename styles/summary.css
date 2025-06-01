@@ -67,8 +67,32 @@ body {
     justify-content: center;
     align-items: center;
     background-color: var(--primary-color);
-    cursor: pointer;
     border-radius: 30px;
+    text-decoration: none;
+}
+
+.urgent-tasks-container:hover {
+    transform: scale(1.1);
+    transition: transform 0.2s ease-in-out;
+    background-color: white;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    border-top-left-radius: 0;
+}
+
+.urgent-tasks-container:hover .urgent-tasks-wrapper {
+    transform: scale(1.15);
+    transition: transform 0.2s ease-in-out;
+}
+
+.urgent-tasks-container:hover #totalUrgentTasks, 
+.urgent-tasks-container:hover .urgent-bottom-content-text,
+.urgent-tasks-container:hover .urgent-date,
+.urgent-tasks-container:hover .urgent-deadline {
+    color: var(--primary-color);
+}
+
+.urgent-tasks-container:hover .urgent-separator {
+    background-color: var(--primary-color);
 }
 
 .urgent-tasks-wrapper {
@@ -125,8 +149,8 @@ body {
     background-color: white;
     border-radius: 30px;
     box-shadow: 0px 0px 4px 0px #00000029;
-    cursor: pointer;
     padding: 40px;
+    text-decoration: none;
 }
 
 .todo-tasks-container {
@@ -140,7 +164,7 @@ body {
     border-radius: 30px;
     gap: 16px;
     background-color: var(--sidebar-active);
-    cursor: pointer;
+    text-decoration: none;
 }
 
 .inprogress-tasks-container, .awaitfeedback-tasks-container, .done-tasks-container {
@@ -154,7 +178,7 @@ body {
     border-radius: 30px;
     gap: 16px;
     padding: 40px;
-    cursor: pointer;
+    text-decoration: none;
 }
 
 .top-content {
