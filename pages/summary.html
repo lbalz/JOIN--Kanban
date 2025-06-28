@@ -27,11 +27,17 @@
             <div class="help-container">
                 <img src="../assets/icons/default/help.svg" alt="">
             </div>
-            <div class="profile-container">
+            <div class="profile-container" onclick="toggleProfileMenu()">
                 <div class="text-container">
                     <span>LB</span>
                 </div>
             </div>
+        </div>
+
+        <div class="profile-menu" id="profileMenu" style="display: none">
+            <a class="menu-link" href="./legal-notice.html">Legal Notice</a>
+            <a class="menu-link" href="./privacy-policy.html">Privacy Policy</a>
+            <a class="menu-link" href="../index.html">Log out</a> <!-- ggf. onclick="logOut()"-->
         </div>
     </header>
 

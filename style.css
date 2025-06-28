@@ -16,8 +16,9 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 0 24px;
+    padding: 20px 40px;
     box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.1);
+    position: relative;
 }
 
 .logo-container {
@@ -70,6 +71,38 @@ header {
     align-items: center;
     border-radius: 28px;
     background-color: white;
+    cursor: pointer;
+}
+
+.profile-menu {
+    width: 176px;
+    height: 136px;
+    /* display: none; */
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    position: absolute;
+    right: 0;
+    top: 96px;
+    background: var(--white);
+    border-radius: 20px;
+    border-top-right-radius: 0;
+    box-shadow: 0px 4px 8px 0px #00000033;
+    
+}
+
+.menu-link {
+    width: 95%;
+    color: var(--dark-gray);
+    text-decoration: none;
+    padding: 8px 16px;
+    text-align: right;
+    border-radius: 8px;   
+}
+
+.menu-link:hover {
+    background-color: var(--sidebar-hover);
 }
 
 .text-container {
