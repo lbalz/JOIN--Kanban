@@ -17,15 +17,17 @@ body {
 
 .content-wrapper {
     width: 75%;
-    height: 68%;
+    height: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: center;
+    gap: 80px;
 }
 
 #greetingContainer {
     width: 100%;
-    height: 140px;
+    height: auto;
     display: flex;
     justify-content: center;
     align-items: start;
@@ -38,10 +40,11 @@ body {
 
 .summary-container {
     width: 100%;
-    height: calc(100% - 140px);
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: center;
+    gap: 40px;
 }
 
 .summary-top-container {
@@ -111,8 +114,6 @@ body {
     gap: 12px;
 }
 
-/* left-container top-content muss umbenant werden in urgent zwecks schriftfarbe */
-
 .urgent-separator {
     height: 90%;
     width: 3px;
@@ -139,7 +140,7 @@ body {
 }
 
 .board-tasks-container {
-    width: 22.5%;
+    width: 204px;
     height: 191px;
     display: flex;
     flex-direction: column;
@@ -153,9 +154,33 @@ body {
     text-decoration: none;
 }
 
+.board-tasks-container:hover,
+.inprogress-tasks-container:hover,
+.awaitfeedback-tasks-container:hover,
+.done-tasks-container:hover {
+    transform: scale(1.1);
+    transition: transform 0.2s ease-in-out;
+    background-color: var(--secondary-color);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    border-top-left-radius: 0;
+}
+
+.board-tasks-container:hover #totalBoardTasks,
+.board-tasks-container:hover .bottom-content-text,
+.inprogress-tasks-container:hover #totalInProgressTasks,
+.inprogress-tasks-container:hover .bottom-content-text,
+.awaitfeedback-tasks-container:hover #totalAwaitFeedbackTasks,
+.awaitfeedback-tasks-container:hover .bottom-content-text,
+.done-tasks-container:hover #totalDoneTasks,
+.done-tasks-container:hover .bottom-content-text {
+    color: var(--white);
+    transform: scale(1.15);
+    transition: transform 0.2s ease-in-out;
+}
+
 .todo-tasks-container {
-    width: 22.5%;
-    height: 85%;
+    width: 204px;
+    height: 220px;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -163,13 +188,29 @@ body {
     box-shadow: 0px 0px 4px 0px #00000029;
     border-radius: 30px;
     gap: 16px;
+    padding: 40px;
     background-color: var(--sidebar-active);
     text-decoration: none;
 }
 
+.todo-tasks-container:hover {
+    transform: scale(1.1);
+    transition: transform 0.2s ease-in-out;
+    background-color: var(--white);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    border-top-left-radius: 0;
+}
+
+.todo-tasks-container:hover #totalToDoTasks,
+.todo-tasks-container:hover .bottom-content-text {
+    color: var(--secondary-color);
+    transform: scale(1.15);
+    transition: transform 0.2s ease-in-out;
+}
+
 .inprogress-tasks-container, .awaitfeedback-tasks-container, .done-tasks-container {
-    width: 22.5%;
-    height: 85%;
+    width: 204px;
+    height: 220px;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -234,7 +275,7 @@ body {
 }
 
 .bottom-content-text {
-    color: var(--secondary-color);
+    color: var(--primary-color);
     font-size: 24px;
     text-align: center;
 }
