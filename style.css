@@ -22,9 +22,8 @@ header {
 }
 
 .logo-container {
-        display: flex;
-        align-items: center;
-        cursor: pointer;
+    display: flex;
+    align-items: center;
 }
 
 .logo-container>img {
@@ -58,6 +57,11 @@ header {
     cursor: pointer;
 }
 
+.help-container:hover {
+    transform: scale(1.15);
+    transition: transform 0.2s ease;
+}
+
 .help-container>img {
     width: 24px;
     height: 24px;
@@ -74,10 +78,13 @@ header {
     cursor: pointer;
 }
 
+.profile-container:hover {
+    background-color: var(--sidebar-active);
+}
+
 .profile-menu {
     width: 176px;
     height: 136px;
-    /* display: none; */
     flex-direction: column;
     justify-content: center;
     align-items: center;
