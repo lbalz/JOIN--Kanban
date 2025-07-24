@@ -6,3 +6,110 @@ body {
     justify-content: center;
     align-items: center;
 }
+
+.content-wrapper {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.add-task-required-text {
+    font-size: 14px;
+    color: var(--error-color);
+    display: none;
+}
+
+.add-task-form {
+    width: 480px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 24px;
+    padding-left: 16px;
+    overflow-y: auto;
+}
+
+.title-input-container,
+.description-input-container,
+.due-date-input-container {
+    width: 440px;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: center;
+}
+
+.title-input {
+    width: 100%;
+    height: 64px;
+    font-size: 32px;
+    border: 0;
+    border-bottom: 1px solid var(--light-gray);
+    padding: 13px 16px;
+    outline: none;
+}
+
+.title-input::placeholder,
+.description-input::placeholder,
+.due-date-input::placeholder,
+.subtasks-input::placeholder {
+    color: var(--light-gray);
+}
+
+.title-input:focus {
+    border: 0;
+    border-bottom: 1px solid var(--secondary-color);
+}
+
+.description-input-container,
+.due-date-input-container {
+    gap: 8px;
+}
+
+.description-label-container,
+.due-date-label-container {
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    color: var(--dark-gray);
+}
+
+.description-label-container {
+    gap: 4px;
+}
+
+.description-label-container p,
+.due-date-label-container p {
+    font-weight: bold;
+}
+
+.description-input {
+    width: 100%;
+    height: 88px;
+    border-color: var(--light-gray);
+    border-radius: 10px;
+    border-top-left-radius: 0;
+    padding-top: 18px;
+    padding-left: 16px;
+    font-size: 20px;
+    resize: none;
+    outline: none;
+}
+
+.description-input:focus {
+    border-color: var(--secondary-color);
+}
+
+.due-date-input {
+    width: 100%;
+    height: 48px;
+    padding: 12px 16px;
+    font-size: 20px;
+    border: 0;
+    border-bottom: 1px solid var(--light-gray);
+    outline: none;
+}

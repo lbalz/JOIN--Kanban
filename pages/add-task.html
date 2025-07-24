@@ -45,11 +45,84 @@
         <main class="page-content">
             <div class="content-wrapper">
                 <div class="add-task-form">
+                    <div class="title-input-container">
+                        <input type="text" class="title-input" placeholder="Enter a title">
+                        <p class="add-task-required-text">This field is required</p>
+                    </div>
 
+                    <div class="description-input-container">
+                        <div class="description-label-container">
+                            <p>Description</p>
+                            <span>(optional)</span>
+                        </div>
+                        <textarea class="description-input" placeholder="Enter a Description"></textarea>
+                    </div>
+
+                    <div class="due-date-input-container">
+                        <div class="due-date-label-container">
+                            <p>Due date</p>
+                        </div>
+                        <input type="date" class="due-date-input" placeholder="dd/mm/yyyy">
+                        <p class="add-task-required-text">This field is required</p>
+                    </div>
+
+                    <div class="priority-btn-container">
+                        <div class="urgent-btn">
+
+                        </div>
+
+                        <div class="medium-btn">
+
+                        </div>
+
+                        <div class="low-btn">
+
+                        </div>
+                    </div>
+
+                    <div class="assigned-to-container">
+                        <div class="assigned-to-label-container">
+                            <p>Assigned to</p>
+                            <span>(optional)</span>
+                        </div>
+                        <select name="assign-contacts" id="">
+                            <option value="">
+                                <div>
+                                    <!-- Load contacts here -->
+                                </div>
+                            </option>
+                        </select>
+                    </div>
+
+                    <div class="category-container">
+                        <div class="assigned-to-label-container">
+                            <p>Category</p>
+                        </div>
+                        <select name="assign-category" id="">
+                            <option value="">Technical Task</option>
+                            <option value="">User Story</option>
+                        </select>
+                    </div>
+
+                    <div class="subtasks-container">
+                        <div class="subtasks-label-container">
+                            <p>Subtasks</p>
+                            <p>(optional)</p>
+                        </div>
+                        <input type="text" class="subtasks-input" placeholder="Add new subtask">
+                    </div>
                 </div>
 
-                <div class="add-task-buttons">
-                    
+                <div class="btn-container">
+                    <div class="clear-btn">
+                        <p>Clear</p>
+                        <img src="" alt="">
+                    </div>
+
+                    <div class="add-task-btn">
+                        <p>Add task</p>
+                        <img src="" alt="">
+                    </div>
                 </div>
             </div>
         </main>
